@@ -1,10 +1,11 @@
 import axios from 'axios';
 import { DRF_TOKEN } from '../constants';
 
+const mode = import.meta.env.MODE; // 'development', 'production', 'test'
 const api = axios.create({
     // env variables need to be prefixed with VITE_
-    //baseURL: import.meta.env.VITE_API_URL,
-    baseURL: 'http://127.0.0.1:8000',
+    //baseURL: 'http://127.0.0.1:8000',
+    baseURL: mode === 'development' ? import.meta.env.VITE_API_BASE_URL_LOCAL : import.meta.env.VITE_API_BASE_URL_PROD,
     timeout: 10000,
     headers: {
         'Content-Type': 'application/json',
