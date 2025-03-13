@@ -76,3 +76,11 @@ jobs:
           app-name: 'yuzugallery-backend'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_11871518FE6942C4B87BC1F714DADC7F }}
+
+      - name: 'Post deployment tasks'
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: 'yuzugallery-backend'
+          slot-name: 'Production'
+          configuration-file: './post_deployment.sh'
+          
