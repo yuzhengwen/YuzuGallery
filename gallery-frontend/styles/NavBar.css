@@ -1,0 +1,43 @@
+.navbar {
+    position: sticky;
+    display: flex;
+    background-color: var(--contrast);
+    padding: 0.1rem 1rem;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.navbar li {
+    list-style-type: none;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.navbar a {
+    color: var(--off-white);
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: var(--secondary-accent);
+    cursor: pointer;
+}
+.navbar .user-welcome {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: var(--secondary-accent);
+    font-style: italic;
+}

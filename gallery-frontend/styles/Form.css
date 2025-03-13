@@ -1,0 +1,72 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+input,
+textarea {
+    border: 0px;
+    border-bottom: 1px solid gray;
+    font-size: 1rem;
+    margin: 0.25rem;
+    min-width: 125px;
+    padding: 0.5rem;
+    transition: background-color 0.5s ease-out;
+    background-color: var(--contrast-light);
+    font: inherit;
+}
+
+input:focus,
+textarea:focus {
+    background-color: var(--off-white);
+}
+
+input:optional,
+textarea:optional {
+    border-color: gray;
+}
+
+input:required,
+textarea:required {
+    border-color: black;
+}
+
+input:invalid,
+textarea:invalid {
+    border-color: red;
+}
+
+.submit-button {
+    margin-top: 1.5rem;
+}
+
+.form-footer-text {
+    margin-top: 1rem;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    margin-top: 1rem;
+    background-color: var(--contrast-light);
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+.custom-file-upload:hover {
+    background-color: var(--off-white);
+    transition: ease-in-out 0.2s;
+}
+
+.output {
+    margin-top: 1rem;
+}

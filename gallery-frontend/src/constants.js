@@ -1,0 +1,1 @@
+export const DRF_TOKEN = 'drf_token';
